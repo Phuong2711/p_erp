@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="web.SearchPanel.Category" t-inherit-mode="extension" owl="1">
+        <xpath expr="//span[hasclass('o_search_panel_label_title')]" position="replace">
+            <span
+                class="o_search_panel_label_title"
+                t-att-class="{'fw-bold' : value.bold}"
+                t-esc="value.display_name"
+            />
+        </xpath>
+    </t>
+
+</templates>

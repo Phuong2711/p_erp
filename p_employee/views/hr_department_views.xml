@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_department_form_inherited" model="ir.ui.view">
+            <field name="name">view.department.form.inherited</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//field[@name='active']" position="before">
+                    <div class="oe_title">
+                        <h1 class="d-flex flex-row">
+                            <field name="name" placeholder="Department Name" required="True"
+                                   style="font-size: min(4vw, 2.6rem);"/>
+                        </h1>
+                    </div>
+                </xpath>
+                <xpath expr="//sheet//group[@col='4']//field[@name='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet//group[@col='4']//field[@name='name']" position="before">
+                    <field name="p_code"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
