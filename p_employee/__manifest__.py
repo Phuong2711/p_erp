@@ -14,7 +14,12 @@
         'web'
     ],
     'data': [
+        'security/ir.model.access.csv',
+        'views/timeline_type_views.xml',
+        'views/document_views.xml',
         'views/hr_department_views.xml',
+        'views/hr_employee_views.xml',
+        'views/menu.xml',
     ],
     'installable': True,
     'application': True,

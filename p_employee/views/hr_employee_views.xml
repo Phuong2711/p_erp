@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_employee_form_inherit" model="ir.ui.view">
+            <field name="name">view_employee_form_inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//field[@name='mobile_phone']" position="after">
+                    <field name="p_code"/>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='public']" position="after">
+                    <page name="timeline" string="Timeline Information" groups="hr.group_hr_user">
+                        <field name="p_timeline_ids">
+                            <tree editable="top" default_order="sequence">
+                                <field name="sequence" invisible="True"/>
+                                <field name="from_date"/>
+                                <field name="to_date"/>
+                                <field name="type_id"
+                                       options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
+                                       required="True"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='public']" position="after">
+                    <page name="employee_document" string="Documents" groups="hr.group_hr_user">
+                        <field name="p_document_line_ids">
+                            <tree editable="top">
+                                <field name="document_id"/>
+                                <field name="document_attachment" widget="binary" filename="document_attachment_name"/>
+                                <field name="document_attachment_name" invisible="True"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='country_id']" position="after">
+                    <field name="gender" position="move"/>
+                    <field name="birthday" position="move"/>
+                    <field name="place_of_birth" position="move"/>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='identification_id']" position="after">
+                    <field name="p_issued_date"/>
+                    <field name="p_issued_place"/>
+                    <field name="p_id_front_name" invisible="True"/>
+                    <field name="p_id_back_name" invisible="True"/>
+                    <field name="p_id_front" widget="binary" filename="p_id_front_name"/>
+                    <field name="p_id_back" widget="binary" filename="p_id_back_name"/>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='emergency_contact']" position="before">
+                    <field name="p_emergency_rela"/>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='emergency_phone']" position="after">
+                    <field name="p_emergency_address"/>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='marital']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='marital']" position="after">
+                    <field name="p_marital"/>
+                    <field name="p_family_line_ids" string="">
+                        <tree editable="top">
+                            <field name="relationship" required="True"/>
+                            <field name="name" required="True"/>
+                            <field name="date_of_birth"/>
+                            <field name="phone"/>
+                        </tree>
+                    </field>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='children']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='spouse_complete_name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='spouse_birthdate']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet//field[@name='mobile_phone']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet//field[@name='country_of_birth']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet//field[@name='passport_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
