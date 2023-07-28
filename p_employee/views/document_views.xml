@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="p_document_view_tree" model="ir.ui.view">
+            <field name="name">p_document_view_tree</field>
+            <field name="model">p.document</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="p_document_view_form" model="ir.ui.view">
+            <field name="name">p_document_view_form</field>
+            <field name="model">p.document</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div name="button_box" class="oe_button_box">
+                            <button name="action_not_submitted_employees" class="oe_stat_button" icon="fa-address-card-o"
+                                    type="object">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="not_submitted_employee_count"/>
+                                    </span>
+                                    <span class="o_stat_text">Not Submitted</span>
+                                </div>
+                            </button>
+                            <button name="action_submitted_employees" class="oe_stat_button" icon="fa-address-card-o"
+                                    type="object">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="submitted_employee_count"/>
+                                    </span>
+                                    <span class="o_stat_text">Submitted</span>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1 class="d-flex flex-row">
+                                <field name="name" placeholder="Document name" required="True"
+                                       style="font-size: min(4vw, 2.6rem);"/>
+                            </h1>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="p_document_action" model="ir.actions.act_window">
+            <field name="name">Document</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">p.document</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
