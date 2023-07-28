@@ -7,6 +7,6 @@ class TimeLine(models.Model):
 
     from_date = fields.Date(string='From Date')
     to_date = fields.Date(string='To Date')
-    type_id = fields.Many2one(comodel_name='p.timeline.type', string='Type', ondelete='restrict')
-    sequence = fields.Integer(string='Sequence', related='type_id.sequence')
+    position_id = fields.Many2one(comodel_name='p.position', string='Position', ondelete='restrict')
+    sequence = fields.Integer(string='Sequence', related='position_id.sequence')
     employee_id = fields.Many2one(comodel_name='hr.employee')

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from . import p_timeline_type
+from . import p_position
 from . import p_timeline
 from . import p_family_line
 from . import p_document
