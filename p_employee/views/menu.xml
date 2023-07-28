@@ -8,7 +8,7 @@
                   action="p_employee.timeline_type_action" sequence="6"/>
 
         <menuitem id="menu_document"
-                  name="Employee document"
+                  name="Employee Document"
                   parent="hr.menu_config_employee"
                   action="p_employee.p_document_action" sequence="7"/>
 

@@ -26,7 +26,7 @@
     'auto_install': False,
     'assets': {
         'web.assets_backend': [
-            'p_employee/static/src/xml/search_panel.xml',
+            'p_employee/static/src/xml/*.xml',
         ],
     },
     'license': 'LGPL-3',

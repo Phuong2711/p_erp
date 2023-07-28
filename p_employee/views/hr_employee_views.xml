@@ -25,10 +25,11 @@
                 </xpath>
                 <xpath expr="//sheet/notebook//page[@name='public']" position="after">
                     <page name="employee_document" string="Documents" groups="hr.group_hr_user">
+                        <field name="p_exists_document_ids" invisible="True"/>
                         <field name="p_document_line_ids">
                             <tree editable="top">
-                                <field name="document_id"/>
-                                <field name="document_attachment" widget="binary" filename="document_attachment_name"/>
+                                <field name="document_id" required="True" domain="[('id', 'not in', parent.p_exists_document_ids)]"/>
+                                <field name="document_attachment" widget="binary" filename="document_attachment_name" required="True"/>
                                 <field name="document_attachment_name" invisible="True"/>
                             </tree>
                         </field>
@@ -42,10 +43,6 @@
                 <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='identification_id']" position="after">
                     <field name="p_issued_date"/>
                     <field name="p_issued_place"/>
-                    <field name="p_id_front_name" invisible="True"/>
-                    <field name="p_id_back_name" invisible="True"/>
-                    <field name="p_id_front" widget="binary" filename="p_id_front_name"/>
-                    <field name="p_id_back" widget="binary" filename="p_id_back_name"/>
                 </xpath>
                 <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='emergency_contact']" position="before">
                     <field name="p_emergency_rela"/>
