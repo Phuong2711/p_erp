@@ -191,3 +191,17 @@ msgstr "Nhân sự chưa nộp"
 #, python-format
 msgid "Submitted"
 msgstr "Nhân sự đã nộp"
+
+#. module: p_employee
+#. odoo-python
+#: code:addons/p_employee/models/hr_department.py:0
+#, python-format
+msgid "Duplicating a department code is not allowed!"
+msgstr "Mã phòng ban không được phép trùng lặp!"
+
+#. module: p_employee
+#. odoo-python
+#: code:addons/p_employee/models/hr_employee.py:0
+#, python-format
+msgid "Duplicating a employee code is not allowed!"
+msgstr "Mã nhân viên không được phép trùng lặp!"
