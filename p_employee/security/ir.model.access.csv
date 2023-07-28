@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_timeline,access_timeline,model_p_timeline,hr.group_hr_user,1,1,1,1
-access_timeline_type_officer,access_timeline_type_officer,model_p_timeline_type,hr.group_hr_user,1,0,0,0
-access_timeline_type_administrator,access_timeline_type_administrator,model_p_timeline_type,hr.group_hr_manager,1,1,1,1
+access_position_officer,access_postion_officer,model_p_position,hr.group_hr_user,1,0,0,0
+access_position_administrator,access_position_administrator,model_p_position,hr.group_hr_manager,1,1,1,1
 access_family_line,access_family_line,model_p_family_line,hr.group_hr_user,1,1,1,1
 access_document_officer,access_document_officer,model_p_document,hr.group_hr_user,1,0,0,0
 access_document_administrator,access_document_administrator,model_p_document,hr.group_hr_manager,1,1,1,1

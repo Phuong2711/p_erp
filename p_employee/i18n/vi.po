@@ -3,3 +3,191 @@
 #: model:ir.model.fields,field_description:hr.field_res_users__identification_id
 msgid "Identification No"
 msgstr "Số CMND/ CCCD"
+
+#. module: p_employee
+#: model_terms:ir.ui.view,arch_db:p_employee.view_employee_form_inherit
+msgid "Documents"
+msgstr "Hồ sơ tiếp nhận"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_document_line__document_id
+#: model_terms:ir.ui.view,arch_db:p_employee.p_document_view_form
+msgid "Document name"
+msgstr "Tên hồ sơ"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_document_line__document_attachment
+msgid "Attachment"
+msgstr "Tệp tin"
+
+#. module: p_employee
+#: model_terms:ir.ui.view,arch_db:p_employee.view_employee_form_inherit
+msgid "Timeline Information"
+msgstr "Quá trình công tác"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_timeline__from_date
+msgid "From Date"
+msgstr "Từ ngày"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_timeline__to_date
+msgid "To Date"
+msgstr "Đến ngày"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.view_employee_form
+msgid "Private Contact"
+msgstr "Thông tin liên hệ"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.view_employee_form
+msgid "Family Status"
+msgstr "Tình trạng hôn nhân và gia đình"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:hr.view_employee_form
+msgid "Emergency"
+msgstr "Liên hệ khẩn cấp"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:hr.view_employee_form
+msgid "Citizenship"
+msgstr "Thông tin công dân"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_hr_employee__p_issued_date
+msgid "Issued Date"
+msgstr "Ngày cấp"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_hr_employee__p_issued_place
+msgid "Issued Place"
+msgstr "Nơi cấp"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_hr_employee__p_marital
+msgid "Marital Status"
+msgstr "Tình trạng hôn nhân"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_hr_employee__p_emergency_rela
+#: model:ir.model.fields,field_description:p_employee.field_p_family_line__relationship
+msgid "Relationship"
+msgstr "Mối quan hệ"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_hr_employee__p_emergency_address
+msgid "Contact Address"
+msgstr "Địa chỉ liên hệ"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_family_line__name
+msgid "Relative Name"
+msgstr "Họ tên"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_family_line__date_of_birth
+msgid "Date of Birth"
+msgstr "Ngày sinh"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_family_line__phone
+msgid "Phone Number"
+msgstr "SĐT"
+
+#. module: p_employee
+#: model:ir.model.fields.selection,name:p_employee.selection__hr_employee__p_marital__single
+msgid "Single"
+msgstr "Chưa kết hôn"
+
+#. module: p_employee
+#: model:ir.model.fields.selection,name:p_employee.selection__hr_employee__p_marital__married
+msgid "Married"
+msgstr "Đã kết hôn"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_hr_employee__p_code
+msgid "Employee Code"
+msgstr "Mã nhân viên"
+
+#. module: p_employee
+#: model:ir.model,name:p_employee.model_p_position
+#: model:ir.model.fields,field_description:p_employee.field_p_timeline__position_id
+#: model:ir.ui.menu,name:p_employee.menu_position
+#: model_terms:ir.ui.view,arch_db:p_employee.position_view_tree
+msgid "Position"
+msgstr "Chức vụ"
+
+#. module: p_employee
+#: model_terms:ir.ui.view,arch_db:p_employee.view_employee_form_inherit
+msgid "Family"
+msgstr "Gia đình"
+
+#. module: p_employee
+#: model:ir.actions.act_window,name:p_employee.position_action
+msgid "Positions"
+msgstr "Chức vụ"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_position__name
+msgid "Name"
+msgstr "Tên chức vụ"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_position__sequence
+#: model:ir.model.fields,field_description:p_employee.field_p_timeline__sequence
+msgid "Sequence"
+msgstr "Thứ tự"
+
+#. module: p_employee
+#: model:ir.ui.menu,name:p_employee.menu_document
+msgid "Employee Document"
+msgstr "Hồ sơ nhân sự"
+
+#. module: p_employee
+#: model:ir.actions.act_window,name:p_employee.p_document_action
+#: model:ir.model,name:p_employee.model_p_document
+msgid "Document"
+msgstr "Hồ sơ nhân sự"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_p_document__name
+msgid "Name"
+msgstr "Tên hồ sơ"
+
+#. module: p_employee
+#: model_terms:ir.ui.view,arch_db:p_employee.p_document_view_form
+msgid "<span class=\"o_stat_text\">Not Submitted</span>"
+msgstr "<span class=\"o_stat_text\">Chưa nộp</span>"
+
+#. module: p_employee
+#: model_terms:ir.ui.view,arch_db:p_employee.p_document_view_form
+msgid "<span class=\"o_stat_text\">Submitted</span>"
+msgstr "<span class=\"o_stat_text\">Đã nộp</span>"
+
+#. module: p_employee
+#: model:ir.model.fields,field_description:p_employee.field_hr_department__p_code
+msgid "Department Code"
+msgstr "Mã phòng ban"
+
+#. module: p_employee
+#: model_terms:ir.ui.view,arch_db:p_employee.view_department_form_inherited
+msgid "Department Name"
+msgstr "Tên phòng ban"
+
+#. module: p_employee
+#. odoo-python
+#: code:addons/p_employee/models/p_document.py:0
+#, python-format
+msgid "Not Submitted"
+msgstr "Nhân sự chưa nộp"
+
+#. module: p_employee
+#. odoo-python
+#: code:addons/p_employee/models/p_document.py:0
+#, python-format
+msgid "Submitted"
+msgstr "Nhân sự đã nộp"

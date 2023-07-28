@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="position_view_tree" model="ir.ui.view">
+            <field name="name">position.view.tree</field>
+            <field name="model">p.position</field>
+            <field name="arch" type="xml">
+                <tree string="Position" editable="top">
+                    <field name="name"/>
+                    <field name="sequence"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="position_action" model="ir.actions.act_window">
+            <field name="name">Positions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">p.position</field>
+            <field name="view_mode">tree</field>
+        </record>
+    </data>
+</odoo>

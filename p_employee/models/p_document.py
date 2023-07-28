@@ -7,7 +7,7 @@ class Document(models.Model):
     _name = "p.document"
     _description = "Document"
 
-    name = fields.Char(string='name', translate=True, required=True)
+    name = fields.Char(string='Name', translate=True, required=True)
     document_line_ids = fields.One2many(comodel_name='p.document.line', inverse_name='document_id', string='Line ids')
     employee_ids = fields.Char(string='Employee', compute='_compute_employee')
     submitted_employee_count = fields.Integer(string='Submitted Employee Count', compute='_compute_employee')

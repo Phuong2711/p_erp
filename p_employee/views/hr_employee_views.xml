@@ -16,7 +16,7 @@
                                 <field name="sequence" invisible="True"/>
                                 <field name="from_date"/>
                                 <field name="to_date"/>
-                                <field name="type_id"
+                                <field name="position_id"
                                        options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"
                                        required="True"/>
                             </tree>
@@ -55,7 +55,7 @@
                 </xpath>
                 <xpath expr="//sheet/notebook//page[@name='personal_information']//field[@name='marital']" position="after">
                     <field name="p_marital"/>
-                    <field name="p_family_line_ids" string="">
+                    <field name="p_family_line_ids" string="Family">
                         <tree editable="top">
                             <field name="relationship" required="True"/>
                             <field name="name" required="True"/>
