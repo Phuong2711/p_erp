@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
-import re, json
+import re
 
 
 class HrEmployee(models.Model):
@@ -27,6 +27,14 @@ class HrEmployee(models.Model):
                 pattern = '^0[0-9]{9}$'  # Phone number start with 0 and must have 10 digits
                 if not re.match(pattern, employee.work_phone):
                     raise ValidationError(_('Work phone is not correct format!'))
+
+    @api.constrains('p_code')
+    def _check_p_code(self):
+        for employee in self:
+            if employee.p_code:
+                domain = [('id', '!=', employee.id), ('p_code', '=', employee.p_code)]
+                if self.search(domain):
+                    raise ValidationError(_('Duplicating a employee code is not allowed!'))
 
     @api.depends('p_document_line_ids.document_id')
     def _compute_p_exists_document_ids(self):
