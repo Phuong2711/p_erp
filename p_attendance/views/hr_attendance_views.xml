@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_attendance_tree_inherit" model="ir.ui.view">
+            <field name="name">view.attendance.tree.inherit</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_attendance_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='worked_hours']" position="before">
+                    <field name="p_code" readonly="True" optional="hide"/>
+                    <field name="p_worked_days"/>
+                    <field name="p_attendance_date" optional="hide"/>
+                    <field name="p_tz" optional="hide"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

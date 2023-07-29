@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr_attendance.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='overtime_settings']" position="after">
+                <h2>Attendance Codes</h2>
+                <div class="row mt16 o_settings_container" name="attendance_codes">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="p_wfo_code"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-10">
+                                        This code is used for work from office record.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="p_wfo_code" required="1" class="w-75"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="p_wfh_code"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-10">
+                                        This code is used for work from home record.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="p_wfh_code" required="1" class="w-75"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <h2>Calculate Hours Worked</h2>
+                <div class="row mt16 o_settings_container" name="calculate_hour_worked">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="p_worked_hours_base"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-10">
+                                        Define how worked hours is calculated.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="p_worked_hours_base" required="1" class="w-75"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box" attrs="{'invisible': [('p_worked_hours_base', '!=', 'flexible')]}">
+                            <div class="o_setting_right_pane">
+                                <label for="p_work_hour_day"/>
+                                <div class="row">
+                                    <div class="text-muted col-lg-10">
+                                        Number of working hours a day.
+                                    </div>
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="p_work_hour_day" required="1" class="w-75"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+
+
+    </data>
+</odoo>

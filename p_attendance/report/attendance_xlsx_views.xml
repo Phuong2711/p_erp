@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="attendance_report_xlsx_view_form" model="ir.ui.view">
+            <field name="name">attendance.xlsx.view.form</field>
+            <field name="model">report.p_attendance.attendance_xlsx</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="month"/>
+                            <field name="year"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_print_xlsx" string="Print Excel" type="object" class="oe_highlight" groups="hr_attendance.group_hr_attendance_manager" data-hotkey="q"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="attendance_report_xlsx_action" model="ir.actions.act_window">
+            <field name="name">Attendances Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.p_attendance.attendance_xlsx</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_attendance_reporting" name="Reporting" parent="hr_attendance.menu_hr_attendance_root" groups="hr_attendance.group_hr_attendance_manager" sequence="30">
+            <menuitem id="menu_attendance_report_xlsx" name="Report Xlsx" action="attendance_report_xlsx_action" sequence="10"/>
+        </menuitem>
+    </data>
+</odoo>
