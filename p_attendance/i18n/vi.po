@@ -1,0 +1,412 @@
+#. module: p_attendance
+#: model:ir.actions.report,print_report_name:p_attendance.attendance_xlsx_report
+msgid "'Attendance %s_%s' % (object.month, object.year)"
+msgstr "'Chấm công %s_%s' % (object.month, object.year)"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "ATTENDANCE DETAILS"
+msgstr "CÔNG CHI TIẾT"
+
+#. module: p_attendance
+#: model_terms:ir.ui.view,arch_db:p_attendance.res_config_settings_view_form
+msgid "Attendance Codes"
+msgstr "Mã chấm công"
+
+#. module: p_attendance
+#: model:ir.model.fields,field_description:p_attendance.field_hr_attendance__p_attendance_date
+msgid "Attendance Date"
+msgstr "Ngày chấm công"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Attendance Sources"
+msgstr "Chi tiết công"
+
+#. module: p_attendance
+#: model:ir.actions.act_window,name:p_attendance.attendance_report_xlsx_action
+msgid "Attendances Report"
+msgstr "Báo cáo công tháng"
+
+#. module: p_attendance
+#: model_terms:ir.ui.view,arch_db:p_attendance.res_config_settings_view_form
+msgid "Calculate Hours Worked"
+msgstr "Cách tính công"
+
+#. module: p_attendance
+#: model_terms:ir.ui.view,arch_db:p_attendance.attendance_report_xlsx_view_form
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#: model:ir.model.fields,field_description:p_attendance.field_hr_attendance__check_in
+#, python-format
+msgid "Check In"
+msgstr "Vào Làm"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Check Out"
+msgstr "Tan Làm"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/models/hr_attendance.py:0
+#, python-format
+msgid "Check in and Check out must be in a same date!"
+msgstr "Vào làm và tan làm phải trong cùng một ngày!"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#: model:ir.model.fields,field_description:p_attendance.field_hr_attendance__p_code
+#, python-format
+msgid "Code"
+msgstr "Mã chấm công"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__res_company__p_worked_hours_base__company
+msgid "Company Calendar"
+msgstr "Lịch chung công ty"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Date"
+msgstr "Ngày"
+
+#. module: p_attendance
+#: model_terms:ir.ui.view,arch_db:p_attendance.res_config_settings_view_form
+msgid "Define how worked hours is calculated."
+msgstr "Xác định cách tính công"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#: model:ir.model.fields,field_description:p_attendance.field_hr_attendance__p_department_code
+#, python-format
+msgid "Department Code"
+msgstr "Mã phòng ban"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#: model:ir.model.fields,field_description:p_attendance.field_hr_attendance__p_department_name
+#, python-format
+msgid "Department Name"
+msgstr "Tên phòng ban"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__res_company__p_worked_hours_base__employee
+msgid "Employee Calendar"
+msgstr "Lịch riêng của nhân viên"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Employee ID"
+msgstr "ID nhân viên"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Employee Name"
+msgstr "Tên nhân viên"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Employee code"
+msgstr "Mã nhân viên"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Employee name"
+msgstr "Tên nhân viên"
+
+#. module: p_attendance
+#: model:ir.actions.report,name:p_attendance.attendance_xlsx_report
+msgid "Export Attendance"
+msgstr "Xuất báo cáo tháng"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__res_company__p_worked_hours_base__flexible
+msgid "Flexible"
+msgstr "Linh hoạt"
+
+#. module: p_attendance
+#: model:ir.model,name:p_attendance.model_report_p_attendance_attendance_xlsx
+msgid "Generate Attendance Report"
+msgstr "Xuất báo cáo công"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#: model:ir.model.fields,field_description:p_attendance.field_report_p_attendance_attendance_xlsx__id
+#, python-format
+msgid "ID"
+msgstr "ID"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "MONTHLY ATTENDANCE REPORT"
+msgstr "BÁO CÁO CÔNG THÁNG"
+
+#. module: p_attendance
+#: model:ir.model.fields,field_description:p_attendance.field_report_p_attendance_attendance_xlsx__month
+msgid "Month"
+msgstr "Tháng"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Month:"
+msgstr "Tháng:"
+
+#. module: p_attendance
+#: model_terms:ir.ui.view,arch_db:p_attendance.res_config_settings_view_form
+msgid "Number of working hours a day."
+msgstr "Số giờ làm việc 1 ngày."
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Period from %s to %s"
+msgstr "Giai đoạn từ %s đến %s"
+
+#. module: p_attendance
+#: model_terms:ir.ui.view,arch_db:p_attendance.attendance_report_xlsx_view_form
+msgid "Print Excel"
+msgstr "Xuất Excel"
+
+#. module: p_attendance
+#: model:ir.ui.menu,name:p_attendance.menu_attendance_report_xlsx
+msgid "Report Xlsx"
+msgstr "Báo cáo công tháng (Excel)"
+
+#. module: p_attendance
+#: model:ir.ui.menu,name:p_attendance.menu_attendance_reporting
+msgid "Reporting"
+msgstr "Báo cáo"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "The value [%s] should be year"
+msgstr "Giá trị của [%s] không phải là năm"
+
+#. module: p_attendance
+#: model_terms:ir.ui.view,arch_db:p_attendance.res_config_settings_view_form
+msgid "This code is used for work from home record."
+msgstr "Mã này được sử dụng cho làm việc từ xa."
+
+#. module: p_attendance
+#: model_terms:ir.ui.view,arch_db:p_attendance.res_config_settings_view_form
+msgid "This code is used for work from office record."
+msgstr "Mã này được sử dụng cho làm việc tại văn phòng."
+
+#. module: p_attendance
+#: model:ir.model.fields,field_description:p_attendance.field_hr_attendance__p_tz
+msgid "Timezone"
+msgstr "Múi giờ"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/models/hr_attendance.py:0
+#, python-format
+msgid ""
+"To avoid junk data, \"Check In\" and \"Check out\" cannot empty at the same "
+"time!"
+msgstr ""
+"Để tránh dữ liệu rác, \"Vào Làm\" và \"Tan Làm\" không thể để trống cùng lúc "
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Total worked days"
+msgstr "Tổng ngày công"
+
+#. module: p_attendance
+#: model:ir.model.fields,field_description:p_attendance.field_res_company__p_wfh_code
+#: model:ir.model.fields,field_description:p_attendance.field_res_config_settings__p_wfh_code
+msgid "Work From Home Code"
+msgstr "Mã chấm công từ xa"
+
+#. module: p_attendance
+#: model:ir.model.fields,field_description:p_attendance.field_res_company__p_wfo_code
+#: model:ir.model.fields,field_description:p_attendance.field_res_config_settings__p_wfo_code
+msgid "Work From Office Code"
+msgstr "Mã chấm công tại văn phòng"
+
+#. module: p_attendance
+#: model:ir.model.fields,field_description:p_attendance.field_res_company__p_work_hour_day
+#: model:ir.model.fields,field_description:p_attendance.field_res_config_settings__p_work_hour_day
+msgid "Work Hour Day"
+msgstr "Giờ làm việc"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#: model:ir.model.fields,field_description:p_attendance.field_hr_attendance__p_worked_days
+#, python-format
+msgid "Worked Days"
+msgstr "Ngày công"
+
+#. module: p_attendance
+#: model:ir.model.fields,field_description:p_attendance.field_res_company__p_worked_hours_base
+#: model:ir.model.fields,field_description:p_attendance.field_res_config_settings__p_worked_hours_base
+msgid "Worked Hours Base"
+msgstr "Ngày công dựa trên"
+
+#. module: p_attendance
+#: model:ir.model.fields,field_description:p_attendance.field_report_p_attendance_attendance_xlsx__year
+msgid "Year"
+msgstr "Năm"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Year:"
+msgstr "Năm:"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__01
+msgid "January"
+msgstr "01"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__02
+msgid "February"
+msgstr "02"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__03
+msgid "March"
+msgstr "03"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__04
+msgid "April"
+msgstr "04"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__05
+msgid "May"
+msgstr "05"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__06
+msgid "June"
+msgstr "06"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__07
+msgid "July"
+msgstr "07"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__08
+msgid "August"
+msgstr "08"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__09
+msgid "September"
+msgstr "09"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__10
+msgid "October"
+msgstr "10"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__11
+msgid "November"
+msgstr "11"
+
+#. module: p_attendance
+#: model:ir.model.fields.selection,name:p_attendance.selection__report_p_attendance_attendance_xlsx__month__12
+msgid "December"
+msgstr "12"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Mon"
+msgstr "T2"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Tue"
+msgstr "T3"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Wed"
+msgstr "T4"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Thu"
+msgstr "T5"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Fri"
+msgstr "T6"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Sat"
+msgstr "T7"
+
+#. module: p_attendance
+#. odoo-python
+#: code:addons/p_attendance/report/attendance_xlsx.py:0
+#, python-format
+msgid "Sun"
+msgstr "CN"
+
+#. module: hr_attendance
+#: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_report
+msgid "Charts Report"
+msgstr "Báo cáo (Biểu đồ)"
