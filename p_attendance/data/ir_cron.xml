@@ -5,7 +5,7 @@
             <field name="name">Recompute last attendance id</field>
             <field name="model_id" ref="model_hr_employee"/>
             <field name="state">code</field>
-            <field name="code">model._compute_last_attendance_id()</field>
+            <field name="code">model._cron_update_last_attendance_id()</field>
             <field name='interval_number'>1</field>
             <field name='interval_type'>days</field>
             <field name="numbercall">-1</field>

@@ -7,9 +7,21 @@ class HrEmployee(models.Model):
 
     def _compute_last_attendance_id(self):
         wfh_code = self.env.company.p_wfh_code
+        action_date = fields.Datetime.now()
         for employee in self:
             employee.last_attendance_id = self.env['hr.attendance'].search([
                 ('employee_id', '=', employee.id),
+                ('p_attendance_date', '=', action_date),
+                ('p_code', '=', wfh_code)
+            ], limit=1)
+
+    def _cron_update_last_attendance_id(self):
+        wfh_code = self.env.company.p_wfh_code
+        action_date = fields.Datetime.now()
+        for employee in self.search([]):
+            employee.last_attendance_id = self.env['hr.attendance'].search([
+                ('employee_id', '=', employee.id),
+                ('p_attendance_date', '=', action_date),
                 ('p_code', '=', wfh_code)
             ], limit=1)
 
@@ -21,18 +33,17 @@ class HrEmployee(models.Model):
         self.ensure_one()
         wfh_code = self.env.company.p_wfh_code
         action_date = fields.Datetime.now()
+        # Get latest Today work from home record
+        domain = [('employee_id', '=', self.id), ('p_code', '=', wfh_code), ('p_attendance_date', '=', action_date)]
+        today_wfh = self.env['hr.attendance'].search(domain, limit=1)
 
-        if self.attendance_state != 'checked_in':
+        if not today_wfh or today_wfh.check_out:
             vals = {
                 'employee_id': self.id,
                 'check_in': action_date,
                 'p_code': wfh_code,
             }
             return self.env['hr.attendance'].create(vals)
-        attendance = self.env['hr.attendance'].search([('employee_id', '=', self.id), ('check_out', '=', False), ('p_code', '=', wfh_code)], limit=1)
-        if attendance:
-            attendance.check_out = action_date
-        else:
-            raise exceptions.UserError(_('Cannot perform check out on %(empl_name)s, could not find corresponding check in. '
-                'Your attendances have probably been modified manually by human resources.') % {'empl_name': self.sudo().name, })
-        return attendance
+
+        today_wfh.check_out = action_date
+        return today_wfh

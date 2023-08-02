@@ -18,6 +18,12 @@ class HrAttendance(models.Model):
     p_tz = fields.Char(string='Timezone', compute='_compute_tz')
     check_in = fields.Datetime(default=False, required=False)
 
+    def init(self):
+        self.env.cr.execute("""
+        CREATE INDEX IF NOT EXISTS hr_attendance_employee_id_p_attendance_date_p_code_index 
+        ON hr_attendance (employee_id, p_attendance_date, p_code)
+        """)
+
     def _check_validity(self):
         pass
 
@@ -53,7 +59,7 @@ class HrAttendance(models.Model):
             SECOND_PER_HOUR = 3600.0
             worked_hours = delta.total_seconds() / SECOND_PER_HOUR
             worked_days = worked_hours / self.env.company.p_work_hour_day
-            return {'hours': worked_hours, 'days': worked_days}
+            return {'hours': worked_hours, 'days': round(worked_days, 2)}
 
         company = self.env.company
         for attendance in self:
